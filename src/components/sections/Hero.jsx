@@ -23,9 +23,9 @@ export default function Hero() {
 
         {/* Title row */}
         <div className="opacity-0 translate-y-8 animate-in hero-title-row" style={{ display: 'flex', justifyContent: 'center', gap: 12, alignItems: 'baseline', flexWrap: 'wrap', marginBottom: '2rem' }}>
-          <span className="g-text serif" style={{ fontSize: 'clamp(1.2rem,3vw,2.1rem)', fontWeight: 400, letterSpacing: '0.04em' }}>{clientData.title}</span>
-          <span className="hero-separator" style={{ color: '#2a1a4a', fontSize: '1.2rem' }}>·</span>
-          <span className="serif" style={{ fontSize: 'clamp(1rem,2.5vw,1.7rem)', fontWeight: 300, color: '#94a3b8', letterSpacing: '0.04em' }}>{clientData.subtitle}</span>
+          <span className="g-text serif" style={{ fontSize: 'clamp(1.7rem,3.5vw,2.1rem)', fontWeight: 400, letterSpacing: '0.04em' }}>{clientData.title}</span>
+          <span className="hero-separator" style={{ color: '#475569', fontSize: '1.2rem' }}>·</span>
+          <span className="serif" style={{ fontSize: 'clamp(1.4rem,3vw,1.7rem)', fontWeight: 300, color: '#94a3b8', letterSpacing: '0.04em' }}>{clientData.subtitle}</span>
         </div>
 
         {/* Tagline card */}

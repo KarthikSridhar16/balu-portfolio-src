@@ -16,7 +16,7 @@ export default function About() {
             <h2 className="gs-reveal serif" style={{ fontSize: 'clamp(2.4rem,5vw,4rem)', fontWeight: 300, color: '#f8fafc', lineHeight: 1.1, marginBottom: '1.5rem' }}>
               Crafting data<br /><span className="g-text">pipelines that last.</span>
             </h2>
-            <p className="gs-reveal" style={{ color: '#475569', lineHeight: 1.88, fontSize: '0.93rem', fontWeight: 300, marginBottom: '2rem' }}>
+            <p className="gs-reveal" style={{ color: '#94a3b8', lineHeight: 1.88, fontSize: '0.93rem', fontWeight: 300, marginBottom: '2rem' }}>
               {clientData.about}
             </p>
             <a
@@ -36,7 +36,7 @@ export default function About() {
               <div key={i} className="gs-reveal glass glass-hover spotlight" style={{ borderRadius: 18, padding: '2rem 1.5rem', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <div className="g-text serif" style={{ fontSize: '3.2rem', fontWeight: 300, lineHeight: 1, marginBottom: 6 }}>{s.value}</div>
-                  <div style={{ fontSize: '0.65rem', letterSpacing: '0.17em', textTransform: 'uppercase', color: '#475569' }}>{s.label}</div>
+                  <div style={{ fontSize: '0.65rem', letterSpacing: '0.17em', textTransform: 'uppercase', color: '#94a3b8' }}>{s.label}</div>
                 </div>
                 <div className="blob" style={{ width: 80, height: 80, background: 'rgba(124,58,237,0.08)', right: -20, bottom: -20 }} />
               </div>
@@ -46,14 +46,14 @@ export default function About() {
 
         {/* Certifications */}
         <div style={{ marginTop: '4rem' }}>
-          <p className="gs-reveal" style={{ fontSize: '0.58rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#2a1a4a', marginBottom: '1rem' }}>
+          <p className="gs-reveal" style={{ fontSize: '0.65rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#94a3b8', marginBottom: '1rem' }}>
             Certifications
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '0.75rem' }}>
             {clientData.certifications.map((c, i) => (
               <div key={i} className="gs-reveal cert">
-                <div style={{ fontSize: '0.74rem', color: '#e2e8f0', fontWeight: 400, marginBottom: 3 }}>{c.name}</div>
-                <div style={{ fontSize: '0.58rem', letterSpacing: '0.1em', color: '#7c3aed', textTransform: 'uppercase' }}>
+                <div style={{ fontSize: '0.85rem', color: '#f8fafc', fontWeight: 500, marginBottom: 6 }}>{c.name}</div>
+                <div style={{ fontSize: '0.63rem', letterSpacing: '0.1em', color: '#c084fc', textTransform: 'uppercase' }}>
                   {c.issuer}{c.year ? ` · ${c.year}` : ''}
                 </div>
               </div>
