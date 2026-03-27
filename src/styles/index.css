@@ -1,0 +1,295 @@
+/* ── Google Fonts ────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@200;300;400;500;600&display=swap');
+
+/* ── Tailwind ────────────────────────────────────────────────────────────── */
+@import "tailwindcss";
+
+/* ── Design tokens ───────────────────────────────────────────────────────── */
+:root {
+  --bg:           #04050f;
+  --violet:       #7c3aed;
+  --violet-lt:    #a855f7;
+  --cyan:         #22d3ee;
+  --pink:         #e879f9;
+  --text:         #f8fafc;
+  --muted:        #64748b;
+  --dim:          #334155;
+  --card-bg:      rgba(124, 58, 237, 0.05);
+  --card-border:  rgba(168, 85, 247, 0.12);
+}
+
+/* ── Base ────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: var(--bg); }
+::-webkit-scrollbar-thumb  { background: #2a1a4a; border-radius: 4px; }
+
+/* ── Glass card ──────────────────────────────────────────────────────────── */
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+}
+
+.glass-hover {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 0.3s ease,
+              box-shadow   0.4s ease;
+}
+
+.glass-hover:hover {
+  transform: translateY(-6px);
+  border-color: rgba(168, 85, 247, 0.35) !important;
+  box-shadow: 0 24px 60px rgba(124, 58, 237, 0.12);
+}
+
+/* ── Spotlight glow (cursor-tracked, used with useSpotlight hook) ─────────── */
+.spotlight {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    260px circle at var(--sx, 50%) var(--sy, 50%),
+    rgba(168, 85, 247, 0.09),
+    transparent 70%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Gradient text ───────────────────────────────────────────────────────── */
+.g-text {
+  background: linear-gradient(135deg, var(--violet-lt) 0%, var(--cyan) 50%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section tag pill ────────────────────────────────────────────────────── */
+.s-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(168, 85, 247, 0.22);
+  background: rgba(124, 58, 237, 0.07);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--violet-lt);
+  margin-bottom: 1.2rem;
+}
+
+.s-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--violet-lt);
+  flex-shrink: 0;
+}
+
+/* ── Tech badge ──────────────────────────────────────────────────────────── */
+.badge {
+  padding: 3px 11px;
+  font-size: 0.68rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  background: rgba(124, 58, 237, 0.07);
+  color: #c4b5fd;
+  letter-spacing: 0.02em;
+}
+
+/* ── Skills marquee ──────────────────────────────────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee {
+  animation: marquee 38s linear infinite;
+  width: max-content;
+}
+
+.mask-x {
+  -webkit-mask-image: linear-gradient(
+    to right, transparent, black 10%, black 90%, transparent
+  );
+  mask-image: linear-gradient(
+    to right, transparent, black 10%, black 90%, transparent
+  );
+}
+
+/* ── Timeline dot ────────────────────────────────────────────────────────── */
+.tl-dot {
+  position: absolute;
+  left: -41px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #2a1a4a;
+  background: var(--bg);
+  transition: all 0.3s;
+}
+
+.tl-item:hover .tl-dot {
+  border-color: var(--violet-lt);
+  background: var(--violet);
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.5);
+}
+
+/* ── Certification card ──────────────────────────────────────────────────── */
+.cert {
+  background: rgba(124, 58, 237, 0.04);
+  border: 1px solid rgba(168, 85, 247, 0.1);
+  border-radius: 12px;
+  padding: 13px 17px;
+  transition: all 0.3s;
+}
+
+.cert:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  background: rgba(124, 58, 237, 0.09);
+}
+
+/* ── Ambient glow blob ───────────────────────────────────────────────────── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Loading overlay ─────────────────────────────────────────────────────── */
+#loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+/* ── Keyframes used by components ────────────────────────────────────────── */
+@keyframes spin   { to { transform: rotate(360deg); } }
+@keyframes pulse  { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+/* ── Responsive / Media Queries ──────────────────────────────────────────── */
+
+/* ─ Tablet (≤ 1024px) ───────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  #about,
+  #experience,
+  #projects,
+  #education {
+    padding: 6rem 1.5rem;
+  }
+  #skills {
+    padding: 6rem 0;
+  }
+}
+
+/* ─ Mobile (≤ 768px) ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Sections — reduce vertical breathing room */
+  #hero     { padding: 0 1.25rem; }
+  #about,
+  #experience,
+  #projects,
+  #education { padding: 4.5rem 1.25rem; }
+  #skills   { padding: 4.5rem 0; }
+
+  /* Hero title row — stack vertically on mobile */
+  .hero-title-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  /* Hero separator dot — hide when stacked */
+  .hero-separator { display: none !important; }
+
+  /* Hero CTA buttons — stack and full width */
+  .hero-cta-row {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .hero-cta-row > a {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Skills marquee — speed up slightly on mobile (fewer items visible) */
+  .marquee { animation-duration: 25s; }
+
+  /* Experience timeline — tighten left indent */
+  .exp-timeline {
+    margin-left: 4px !important;
+    padding-left: 1.75rem !important;
+  }
+
+  /* Education card — allow grade to left-align when wrapped */
+  .edu-card { padding: 1.5rem 1.5rem !important; }
+  .edu-card > div:last-child div { text-align: left !important; }
+
+  /* Disable hover lift on touch devices */
+  .glass-hover:hover {
+    transform: none;
+    border-color: var(--card-border) !important;
+    box-shadow: none;
+  }
+}
+
+/* ─ Small mobile (≤ 480px) ──────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Reduce section padding further */
+  #about,
+  #experience,
+  #projects,
+  #education { padding: 3.5rem 1rem; }
+  #skills   { padding: 3.5rem 0; }
+
+  /* Hero name — slightly smaller */
+  #hero h1 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
+
+  /* Skills marquee — tighter pills */
+  .marquee > div {
+    padding: 6px 14px !important;
+    font-size: 0.66rem !important;
+  }
+
+  /* Experience timeline dot — re-align for smaller indent */
+  .tl-dot { left: -29px; }
+
+  /* Nav — tighter padding */
+  nav { padding: 0 1rem !important; }
+}
