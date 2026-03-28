@@ -23,7 +23,7 @@ export default function Experience() {
               <div style={{ marginBottom: '1.2rem' }}>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'baseline', marginBottom: 5 }}>
                   <h3 className="serif" style={{ fontSize: '1.6rem', fontWeight: 400, color: '#f8fafc' }}>{exp.company}</h3>
-                  <span style={{ fontSize: '0.58rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#334155', padding: '3px 10px', borderRadius: 9999, border: '1px solid #1e1040' }}>
+                  <span style={{ fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#94a3b8', padding: '3px 10px', borderRadius: 9999, border: '1px solid rgba(168,85,247,0.2)' }}>
                     {exp.period}
                   </span>
                 </div>
