@@ -16,7 +16,7 @@ export default function Projects() {
         <h2 className="gs-reveal serif" style={{ fontSize: 'clamp(2.4rem,5vw,4rem)', fontWeight: 300, color: '#f8fafc', lineHeight: 1.1, marginBottom: '1rem' }}>
           Things I've<br /><span className="g-text">built.</span>
         </h2>
-        <p className="gs-reveal" style={{ color: '#334155', fontSize: '0.9rem', fontWeight: 300, marginBottom: '3.5rem', maxWidth: 480 }}>
+        <p className="gs-reveal" style={{ color: '#64748b', fontSize: '0.9rem', fontWeight: 300, marginBottom: '3.5rem', maxWidth: 480 }}>
           From ML models to full-stack desktop applications — solving real problems with data.
         </p>
 
@@ -38,7 +38,7 @@ export default function Projects() {
                 </div>
 
                 <h3 className="serif" style={{ fontSize: '1.65rem', fontWeight: 400, color: '#f8fafc', marginBottom: '0.75rem', lineHeight: 1.2 }}>{proj.name}</h3>
-                <p style={{ fontSize: '0.82rem', color: '#475569', lineHeight: 1.78, fontWeight: 300, marginBottom: '1.5rem' }}>{proj.description}</p>
+                <p style={{ fontSize: '0.82rem', color: '#94a3b8', lineHeight: 1.78, fontWeight: 300, marginBottom: '1.5rem' }}>{proj.description}</p>
 
                 {/* Tech badges */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: '1.75rem' }}>
@@ -52,9 +52,9 @@ export default function Projects() {
                     { href: proj.liveUrl, name: 'link', label: 'Live' },
                   ].map((lk, j) => (
                     <a key={j} href={lk.href}
-                      style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: '0.66rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#334155', textDecoration: 'none', transition: 'color 0.2s' }}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: '0.66rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#64748b', textDecoration: 'none', transition: 'color 0.2s' }}
                       onMouseEnter={e => (e.currentTarget.style.color = '#a855f7')}
-                      onMouseLeave={e => (e.currentTarget.style.color = '#334155')}>
+                      onMouseLeave={e => (e.currentTarget.style.color = '#64748b')}>
                       <Ico name={lk.name} />{lk.label}
                     </a>
                   ))}

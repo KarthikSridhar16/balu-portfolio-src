@@ -14,7 +14,7 @@ export default function Footer() {
           Let's build<br /><span className="g-text">something together.</span>
         </h2>
 
-        <p className="gs-reveal" style={{ color: '#334155', fontSize: '0.92rem', fontWeight: 300, lineHeight: 1.8, maxWidth: 440, margin: '0 auto 3rem' }}>
+        <p className="gs-reveal" style={{ color: '#94a3b8', fontSize: '0.92rem', fontWeight: 300, lineHeight: 1.8, maxWidth: 440, margin: '0 auto 3rem' }}>
           Open to Data Engineer, Python Developer, and Production Support roles. Drop a message.
         </p>
 
@@ -35,7 +35,7 @@ export default function Footer() {
             { name: 'phone',  label: clientData.phone    },
             { name: 'mappin', label: clientData.location },
           ].map((c, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.8rem', color: '#334155' }}>
+            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.8rem', color: '#94a3b8' }}>
               <span style={{ color: '#7c3aed', fontSize: '1rem' }}><Ico name={c.name} /></span>
               {c.label}
             </div>
@@ -49,16 +49,16 @@ export default function Footer() {
             { href: `mailto:${clientData.email}`,  name: 'email'    },
           ].map((s, i) => (
             <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
-              style={{ width: 46, height: 46, borderRadius: '50%', border: '1px solid rgba(124,58,237,0.18)', background: 'rgba(124,58,237,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#334155', fontSize: '1.1rem', textDecoration: 'none', transition: 'all 0.3s' }}
+              style={{ width: 46, height: 46, borderRadius: '50%', border: '1px solid rgba(124,58,237,0.3)', background: 'rgba(124,58,237,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#64748b', fontSize: '1.1rem', textDecoration: 'none', transition: 'all 0.3s' }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(168,85,247,0.5)'; e.currentTarget.style.color = '#a855f7'; e.currentTarget.style.transform = 'scale(1.12)' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(124,58,237,0.18)'; e.currentTarget.style.color = '#334155'; e.currentTarget.style.transform = 'none' }}>
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(124,58,237,0.3)'; e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'none' }}>
               <Ico name={s.name} />
             </a>
           ))}
         </div>
 
         <div style={{ borderTop: '1px solid rgba(124,58,237,0.06)', paddingTop: '2rem' }}>
-          <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', color: '#1e1040' }}>
+          <p style={{ fontSize: '0.65rem', letterSpacing: '0.12em', color: '#475569' }}>
             © {new Date().getFullYear()} Balu R · Crafted with precision
           </p>
         </div>

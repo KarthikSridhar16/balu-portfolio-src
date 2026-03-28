@@ -30,7 +30,7 @@ export default function Hero() {
 
         {/* Tagline card */}
         <div className="opacity-0 translate-y-8 animate-in" style={{ display: 'inline-block', maxWidth: 580, background: 'rgba(124,58,237,0.06)', backdropFilter: 'blur(16px)', border: '1px solid rgba(168,85,247,0.1)', borderRadius: 16, padding: '18px 28px', marginBottom: '3rem' }}>
-          <p style={{ fontSize: 'clamp(0.85rem,2vw,1rem)', color: '#64748b', lineHeight: 1.75, fontWeight: 300 }}>{clientData.tagline}</p>
+          <p style={{ fontSize: 'clamp(0.88rem,2vw,1rem)', color: '#94a3b8', lineHeight: 1.75, fontWeight: 300 }}>{clientData.tagline}</p>
         </div>
 
         {/* CTA buttons */}
@@ -57,9 +57,9 @@ export default function Hero() {
               { href: `mailto:${clientData.email}`, name: 'email' },
             ].map((s, i) => (
               <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
-                style={{ color: '#334155', fontSize: '1.4rem', transition: 'all 0.25s', textDecoration: 'none' }}
+                style={{ color: '#64748b', fontSize: '1.4rem', transition: 'all 0.25s', textDecoration: 'none' }}
                 onMouseEnter={e => { e.currentTarget.style.color = '#a855f7'; e.currentTarget.style.transform = 'scale(1.18)' }}
-                onMouseLeave={e => { e.currentTarget.style.color = '#334155'; e.currentTarget.style.transform = 'none' }}>
+                onMouseLeave={e => { e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'none' }}>
                 <Ico name={s.name} />
               </a>
             ))}
@@ -69,8 +69,8 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="opacity-0 animate-in" style={{ position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
-        <span style={{ fontSize: '0.52rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#1e2240' }}>Scroll</span>
-        <span style={{ fontSize: '1.3rem', color: '#2a1a4a', animation: 'bounce 2.2s infinite' }}><Ico name="mouse" /></span>
+        <span style={{ fontSize: '0.55rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#475569' }}>Scroll</span>
+        <span style={{ fontSize: '1.3rem', color: '#475569', animation: 'bounce 2.2s infinite' }}><Ico name="mouse" /></span>
       </div>
     </section>
   )

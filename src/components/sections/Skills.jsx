@@ -16,7 +16,7 @@ export default function Skills() {
         <h2 className="gs-reveal serif" style={{ fontSize: 'clamp(2.4rem,5vw,4rem)', fontWeight: 300, color: '#f8fafc', lineHeight: 1.1, marginBottom: '1rem' }}>
           Tools of the<br /><span className="g-text">trade.</span>
         </h2>
-        <p className="gs-reveal" style={{ color: '#334155', fontSize: '0.9rem', fontWeight: 300, marginBottom: '3.5rem', maxWidth: 480 }}>
+        <p className="gs-reveal" style={{ color: '#64748b', fontSize: '0.9rem', fontWeight: 300, marginBottom: '3.5rem', maxWidth: 480 }}>
           From raw data ingestion to production-grade SQL optimisation.
         </p>
       </div>

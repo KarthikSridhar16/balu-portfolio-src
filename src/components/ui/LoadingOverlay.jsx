@@ -34,7 +34,7 @@ export default function LoadingOverlay({ visible }) {
           />
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <span style={{ fontSize: '0.58rem', letterSpacing: '0.15em', color: '#334155', textTransform: 'uppercase' }}>Loading</span>
+          <span style={{ fontSize: '0.6rem', letterSpacing: '0.15em', color: '#64748b', textTransform: 'uppercase' }}>Loading</span>
           <span id="progress-text" style={{ fontFamily: 'Cormorant Garamond,serif', fontSize: '1rem', color: '#a855f7', letterSpacing: '0.05em' }}>00%</span>
         </div>
       </div>

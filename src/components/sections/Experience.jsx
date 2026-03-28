@@ -28,15 +28,15 @@ export default function Experience() {
                   </span>
                 </div>
                 <p style={{ fontSize: '0.76rem', color: '#a855f7', letterSpacing: '0.08em', fontWeight: 500 }}>{exp.role}</p>
-                <p style={{ fontSize: '0.62rem', letterSpacing: '0.1em', color: '#2a1a4a', textTransform: 'uppercase', marginTop: 2 }}>{exp.location}</p>
+                <p style={{ fontSize: '0.62rem', letterSpacing: '0.1em', color: '#64748b', textTransform: 'uppercase', marginTop: 2 }}>{exp.location}</p>
               </div>
 
               {/* Bullet list */}
               <div className="glass" style={{ borderRadius: 16, padding: '1.5rem 2rem' }}>
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: 10, listStyle: 'none', margin: 0, padding: 0 }}>
                   {exp.description.map((d, j) => (
-                    <li key={j} style={{ display: 'flex', gap: 12, fontSize: '0.84rem', color: '#475569', lineHeight: 1.75, fontWeight: 300 }}>
-                      <span style={{ color: '#2a1a4a', marginTop: 7, flexShrink: 0 }}>◆</span>
+                    <li key={j} style={{ display: 'flex', gap: 12, fontSize: '0.84rem', color: '#94a3b8', lineHeight: 1.75, fontWeight: 300 }}>
+                      <span style={{ color: '#6d28d9', marginTop: 7, flexShrink: 0 }}>◆</span>
                       {d}
                     </li>
                   ))}

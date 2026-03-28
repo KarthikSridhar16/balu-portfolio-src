@@ -12,8 +12,8 @@
   --cyan:         #22d3ee;
   --pink:         #e879f9;
   --text:         #f8fafc;
-  --muted:        #64748b;
-  --dim:          #334155;
+  --muted:        #94a3b8;
+  --dim:          #64748b;
   --card-bg:      rgba(124, 58, 237, 0.05);
   --card-border:  rgba(168, 85, 247, 0.12);
 }
@@ -218,6 +218,20 @@ h1, h2, h3, h4, .serif {
 
 /* ─ Mobile (≤ 768px) ────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+  /* ── Global small-text visibility boost on mobile ── */
+
+  /* Section tag pills */
+  .s-tag { font-size: 0.68rem !important; }
+
+  /* Tech / skill badges */
+  .badge { font-size: 0.72rem !important; padding: 4px 13px !important; }
+
+  /* Timeline dot border — brighter on mobile */
+  .tl-dot { border-color: rgba(168,85,247,0.3) !important; }
+
+  /* Cert cards — ensure readable text on mobile */
+  .cert { padding: 14px 16px !important; }
+
   /* Sections — reduce vertical breathing room */
   #hero     { padding: 0 1.25rem; }
   #about,
@@ -271,6 +285,22 @@ h1, h2, h3, h4, .serif {
 
 /* ─ Small mobile (≤ 480px) ──────────────────────────────────────────────── */
 @media (max-width: 480px) {
+  /* ── Extra visibility boost on very small screens ── */
+
+  /* All uppercase tracking labels */
+  .s-tag { font-size: 0.7rem !important; }
+  .badge { font-size: 0.74rem !important; }
+
+  /* Experience bullet text */
+  #experience li { font-size: 0.88rem !important; }
+
+  /* Education institution + period */
+  #education p   { font-size: 0.84rem !important; }
+
+  /* Footer contact details */
+  #contact p,
+  #contact div > div { font-size: 0.84rem !important; }
+
   /* Reduce section padding further */
   #about,
   #experience,

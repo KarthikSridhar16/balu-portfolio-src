@@ -45,9 +45,9 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              style={{ fontSize: '0.7rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#64748b', textDecoration: 'none', transition: 'color 0.2s' }}
+              style={{ fontSize: '0.7rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#94a3b8', textDecoration: 'none', transition: 'color 0.2s' }}
               onMouseEnter={e => (e.target.style.color = '#a855f7')}
-              onMouseLeave={e => (e.target.style.color = '#64748b')}
+              onMouseLeave={e => (e.target.style.color = '#94a3b8')}
             >
               {link.label}
             </a>
@@ -74,7 +74,7 @@ export default function Navigation() {
             <div
               key={i}
               style={{
-                width: 22, height: 2, background: menuOpen ? '#a855f7' : '#64748b',
+                width: 22, height: 2, background: menuOpen ? '#a855f7' : '#94a3b8',
                 margin: '5px 0', transition: 'all 0.3s',
                 transform: menuOpen
                   ? i === 0 ? 'rotate(45deg) translate(5px,7px)'
@@ -96,7 +96,7 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#64748b', textDecoration: 'none' }}
+              style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#94a3b8', textDecoration: 'none' }}
             >
               {link.label}
             </a>

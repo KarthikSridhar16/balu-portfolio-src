@@ -19,14 +19,14 @@ export default function Education() {
 
               <div>
                 <h3 className="serif" style={{ fontSize: '1.5rem', fontWeight: 400, color: '#f8fafc', marginBottom: 4 }}>{edu.degree}</h3>
-                <p style={{ fontSize: '0.8rem', color: '#475569', fontWeight: 300 }}>{edu.institution}</p>
-                <p style={{ fontSize: '0.62rem', color: '#2a1a4a', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 4 }}>{edu.period}</p>
+                <p style={{ fontSize: '0.8rem', color: '#94a3b8', fontWeight: 300 }}>{edu.institution}</p>
+                <p style={{ fontSize: '0.62rem', color: '#64748b', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 4 }}>{edu.period}</p>
               </div>
 
               {/* GPA */}
               <div style={{ flexShrink: 0 }}>
                 <div className="g-text serif" style={{ fontSize: '2.8rem', fontWeight: 300, lineHeight: 1, textAlign: 'right' }}>{edu.grade}</div>
-                <div style={{ fontSize: '0.55rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#2a1a4a', textAlign: 'right', marginTop: 2 }}>CGPA</div>
+                <div style={{ fontSize: '0.6rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#64748b', textAlign: 'right', marginTop: 2 }}>CGPA</div>
               </div>
 
               <div className="blob" style={{ width: 120, height: 120, background: 'rgba(124,58,237,0.05)', right: -30, top: -30 }} />
